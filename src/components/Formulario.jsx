@@ -46,10 +46,13 @@ const Formulario = ({crearCita}) => {
         actualizarError(false);
 
         //Asignar un ID con uuid(libreria de id largas, hay un shortid)
-        actualizarCita({
-            ...cita,
+        /*actualizarCita({
+            ...cita, 
             id: uuidv4()
-        })
+        });*/
+        //investigar por qué no funciona el de arriba
+        cita.id = uuidv4()
+        console.log(cita);
 
         //Crear la cita
         crearCita(cita);
